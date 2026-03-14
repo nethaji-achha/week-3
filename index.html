@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+</head>
+
+<body class="light-mode">
+    <header>
+        <nav>
+            <div class="logo">Portfolio.</div>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Gallery</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <button id="theme-toggle" class="btn" aria-label="Toggle Dark Mode">
+                <span id="theme-icon">🌙</span>
+            </button>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Dynamic Greeting Section -->
+        <section id="about" class="glass-section">
+            <h1 id="greeting-title">Welcome!</h1>
+            <p>I am a creative developer passionate about building dynamic web experiences.</p>
+            <a href="#projects" class="btn primary-btn" id="explore-btn">Explore My Work</a>
+        </section>
+
+        <!-- Interactive Gallery -->
+        <section id="projects" class="glass-section projects">
+            <h2>Project Gallery</h2>
+            <div class="gallery-container">
+                <div class="main-image-wrapper">
+                    <img id="main-image"
+                        src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=800&q=80"
+                        alt="Main Project View">
+                    <div id="image-caption" class="caption">Web Development Setup</div>
+                </div>
+                <div class="thumbnail-container">
+                    <img class="thumbnail active"
+                        src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=200&q=80"
+                        data-full="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=800&q=80"
+                        data-caption="Web Development Setup" alt="Thumbnail 1">
+                    <img class="thumbnail"
+                        src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=200&q=80"
+                        data-full="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=800&q=80"
+                        data-caption="Coding Abstract" alt="Thumbnail 2">
+                    <img class="thumbnail"
+                        src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&w=200&q=80"
+                        data-full="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&w=800&q=80"
+                        data-caption="Modern Workspace" alt="Thumbnail 3">
+                    <img class="thumbnail"
+                        src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=200&q=80"
+                        data-full="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80"
+                        data-caption="Data Analytics UI" alt="Thumbnail 4">
+                </div>
+            </div>
+        </section>
+
+        <!-- Functional Contact Form -->
+        <section id="contact" class="glass-section">
+            <h2>Get In Touch</h2>
+            <form id="contact-form" novalidate>
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" placeholder="John Doe">
+                    <div class="error-message" id="name-error"></div>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="john@example.com">
+                    <div class="error-message" id="email-error"></div>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="5" placeholder="Your message here..."></textarea>
+                    <div class="error-message" id="message-error"></div>
+                    <div class="char-countdown" id="char-countdown">250 characters remaining</div>
+                </div>
+
+                <button type="submit" class="btn primary-btn submit-btn" id="submit-btn">Send Message</button>
+                <div id="form-success-msg" class="success-message hidden">Thank you! Your message has been sent
+                    successfully.</div>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="current-year"></span> My Portfolio. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
